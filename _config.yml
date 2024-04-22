@@ -1,0 +1,15 @@
+title: Universal API
+description: Universal API Docs
+theme: just-the-docs
+
+url: https://just-the-docs.github.io
+
+nav_external_links:
+  - title: Demo App
+    url: https://uapimaindemo.z13.web.core.windows.net/
+    hide_icon: false
+    opens_in_new_tab: true
+  - title: Swagger doc
+    url: https://uapi.pandaflow.io/swagger/index.html
+    hide_icon: false
+    opens_in_new_tab: true
