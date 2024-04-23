@@ -1,6 +1,7 @@
 ---
 title: Quick start
 layout: default
+nav_order: 1
 ---
 
 ## Quick start guide

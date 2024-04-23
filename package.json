@@ -1,13 +1,8 @@
 {
   "name": "docs",
   "scripts": {
-    "build": "bundle exec jekyll build",
-    "launch": "serve -p 3012 ./_site",
-    "start": "npm run build && npm run launch"
+    "start": "bundle exec jekyll serve --watch --incremental --quiet --open-url --livereload-min-delay"
   },
   "author": "Denis Litvinov",
-  "license": "MIT",
-  "devDependencies": {
-    "serve": "^14.2.2"
-  }
+  "license": "MIT"
 }
