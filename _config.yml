@@ -6,10 +6,10 @@ url: https://just-the-docs.github.io
 
 nav_external_links:
   - title: Demo App
-    url: https://uapimaindemo.z13.web.core.windows.net/
+    url: https://demo.apipanda.net/
     hide_icon: false
     opens_in_new_tab: true
   - title: Swagger doc
-    url: https://uapi.pandaflow.io/swagger/index.html
+    url: https://app.apipanda.net/swagger/index.html
     hide_icon: false
     opens_in_new_tab: true

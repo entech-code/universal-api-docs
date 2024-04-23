@@ -1,0 +1,13 @@
+{
+  "name": "docs",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "launch": "serve -p 3012 ./_site",
+    "start": "npm run build && npm run launch"
+  },
+  "author": "Denis Litvinov",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.2"
+  }
+}
