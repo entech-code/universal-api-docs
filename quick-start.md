@@ -6,11 +6,11 @@ nav_order: 1
 
 ## Quick start guide
 
-This guide walks you through the step-by-step process to set it up on your HTML page, initialize the required script, and make authenticated calls to the Universal API.
+This guide walks you through the step-by-step process to set it up on your HTML page, initialize the required script, and make authenticated calls to the API Panda.
 
 ## Step 1: Add Script Link
 
-Insert the following script link at the end of the body tag in your HTML page. This link references the required JavaScript file for the Universal API.
+Insert the following script link at the end of the body tag in your HTML page. This link references the required JavaScript file for the API Panda.
 
 ```html
 <script src="https://app.apipanda.net/api/v1/connection/widget-plugin"></script>
@@ -18,12 +18,12 @@ Insert the following script link at the end of the body tag in your HTML page. T
 
 ## Step 2: Initialize the Script
 
-Upon page load, initialize the script using the following snippet. This snippet also demonstrates how to set up a callback function to handle the token received from the Universal API, which is essential for authenticated communication with third-party services.
+Upon page load, initialize the script using the following snippet. This snippet also demonstrates how to set up a callback function to handle the token received from the API Panda, which is essential for authenticated communication with third-party services.
 
 ```javascript
 $(document).ready(function () {
   /*
-        Receives Universal API token details
+        Receives API Panda token details
         @param {tokenDetails} represents accumulated information about token
         @param {tokenDetails.token} serves to authorize requests to particular integration
         @param {tokenDetails.token} serves to determine concrete integration type for token
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
 ## Step 3: Add Button to HTML
 
-Add a button to your HTML which will trigger the Universal API widget when clicked.
+Add a button to your HTML which will trigger the API Panda widget when clicked.
 
 ```html
 <a id="open-widget" href="#" class="btn btn-primary">Open widget</a>
@@ -65,7 +65,7 @@ Add a button to your HTML which will trigger the Universal API widget when click
 
 ## Step 4: Add Button Handler
 
-Implement a click event handler for the button to show the Universal API widget as shown below.
+Implement a click event handler for the button to show the API Panda widget as shown below.
 
 ```javascript
 var btn = $("#open-widget");
@@ -76,9 +76,9 @@ btn.click(function (e) {
 });
 ```
 
-## Step 5: Make a call Universal API
+## Step 5: Make a call API Panda
 
-Once authenticated, you can make calls to the Universal API to manage your third-party services. Utilize the token saved earlier to authorize your requests.
+Once authenticated, you can make calls to the API Panda to manage your third-party services. Utilize the token saved earlier to authorize your requests.
 
 ### Marketplace
 
@@ -150,4 +150,4 @@ $.ajax({
 });
 ```
 
-That's it! You have now successfully set up and utilized the Universal API on your website.
+That's it! You have now successfully set up and utilized the API Panda on your website.
