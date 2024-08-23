@@ -123,4 +123,4 @@ As response you'll receive next object:
 
 ### Conclusion
 
-After that you're ready to use API Panda, and how to do that you can read more in [Quick start guide](quick-start#step-5-make-a-call-universal-api)
+After that you're ready to use API Panda, and how to do that you can read more in [Quick start guide](quick-start#step-5-make-a-call-api-panda)
