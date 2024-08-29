@@ -49,6 +49,36 @@ nav_order: 3
     }
     ```
 * Optimized /connection/established endpoint
+* Changed response error message and code for revoked access tokens:
+    * Before change:
+    
+            HTTP 400 BadRequest
+
+        ```json
+            {
+                "errors": [
+                    {
+                    "code": 401,
+                    "message": "invalid_token"
+                    }
+                ]
+            }
+        ```
+    * After change:
+    
+            HTTP 400 BadRequest
+    
+        ```json
+        {
+            "errors": [
+                {
+                    "code": 4101,
+                    "message": "Unable to refresh token, it was revoked"
+                }
+            ]
+        }
+        ```
+        
 * Fixed response HTTP code for validation errors
     * Before change:
 
