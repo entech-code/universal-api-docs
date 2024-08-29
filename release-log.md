@@ -4,7 +4,7 @@ layout: default
 nav_order: 3
 ---
 
-### Release 0.23
+### Release 1.23
 
 ### Planned: Tue Sep 3rd, 2024
 
@@ -73,7 +73,7 @@ nav_order: 3
         ]
         ```
 
-### Release 0.22
+### Release 1.22
 
 ### Deployed:  Mon Aug 3, 2024
  * [Breaking change] Changed response for endpoint /api/print-on-demand/v1/images:
