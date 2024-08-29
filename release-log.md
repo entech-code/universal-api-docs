@@ -49,6 +49,14 @@ nav_order: 3
     }
     ```
 * Optimized /connection/established endpoint
+* Fixed response HTTP code for validation errors
+    * Before change:
+
+            HTTP 200 OK
+    
+    * After change:
+
+            HTTP 400 BadRequest
 * Required Etsy location field:
     * location field is getting to be required per each `product.variant` which is set to `product`
     * in case of not set location response will contain validation error
