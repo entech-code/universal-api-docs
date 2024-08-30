@@ -4,11 +4,10 @@ layout: default
 nav_order: 3
 ---
 
-### Release 1.23
-
-### Planned: Tue Sep 3rd, 2024
-
-* [Breaking] Errors response format changed to be more explicit:
+## Release 1.23
+### Planned: TBA
+&nbsp;
+* [Breaking change] Errors response format changed to be more explicit:
     * Before change:
     
             HTTP 400 Reponse
@@ -48,35 +47,7 @@ nav_order: 3
             ]
     }
     ```
-* Optimized /connection/established endpoint
-* Fixed response HTTP code for validation errors
-    * Before change:
-
-            HTTP 200 OK
-    
-    * After change:
-
-            HTTP 400 BadRequest
-* Required Etsy location field:
-    * location field is getting to be required per each `product.variant` which is set to `product`
-    * in case of not set location response will contain validation error
-
-            HTTP 400 Response
-
-        ```json
-        [
-            {
-                "code": 68753035282,
-                "message": "Product variant inventory locations are required",
-                "property_name": "Locations"
-            }
-        ]
-        ```
-
-### Release 1.22
-
-### Deployed:  Mon Aug 3, 2024
- * [Breaking change] Changed response for endpoint /api/print-on-demand/v1/images:
+* [Breaking change] Changed response for endpoint /api/print-on-demand/v1/images:
     * Before change:
     
             HTTP 200 Reponse
@@ -102,4 +73,58 @@ nav_order: 3
                 }
             ]
         }
+        ```
+* Optimized /connection/established endpoint
+* Changed response error message and code for revoked access tokens:
+    * Before change:
+    
+            HTTP 400 BadRequest
+
+        ```json
+            {
+                "errors": [
+                    {
+                    "code": 401,
+                    "message": "invalid_token"
+                    }
+                ]
+            }
+        ```
+    * After change:
+    
+            HTTP 400 BadRequest
+    
+        ```json
+        {
+            "errors": [
+                {
+                    "code": 4101,
+                    "message": "Unable to refresh token, it was revoked"
+                }
+            ]
+        }
+        ```
+        
+* Fixed response HTTP code for validation errors
+    * Before change:
+
+            HTTP 200 OK
+    
+    * After change:
+
+            HTTP 400 BadRequest
+* Required Etsy location field:
+    * location field is getting to be required per each `product.variant` which is set to `product`
+    * in case of not set location response will contain validation error
+
+            HTTP 400 Response
+
+        ```json
+        [
+            {
+                "code": 68753035282,
+                "message": "Product variant inventory locations are required",
+                "property_name": "Locations"
+            }
+        ]
         ```
