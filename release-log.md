@@ -4,10 +4,9 @@ layout: default
 nav_order: 3
 ---
 
-### Release 1.23
-
+## Release 1.23
 ### Planned: Tue Sep 3rd, 2024
-
+&nbsp;
 * [Breaking] Errors response format changed to be more explicit:
     * Before change:
     
@@ -102,11 +101,7 @@ nav_order: 3
             }
         ]
         ```
-
-### Release 1.22
-
-### Deployed:  Mon Aug 3, 2024
- * [Breaking change] Changed response for endpoint /api/print-on-demand/v1/images:
+* [Breaking change] Changed response for endpoint /api/print-on-demand/v1/images:
     * Before change:
     
             HTTP 200 Reponse
