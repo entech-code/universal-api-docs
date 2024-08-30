@@ -5,9 +5,9 @@ nav_order: 3
 ---
 
 ## Release 1.23
-### Planned: Tue Sep 3rd, 2024
+### Planned: TBA
 &nbsp;
-* [Breaking] Errors response format changed to be more explicit:
+* [Breaking change] Errors response format changed to be more explicit:
     * Before change:
     
             HTTP 400 Reponse
@@ -47,6 +47,33 @@ nav_order: 3
             ]
     }
     ```
+* [Breaking change] Changed response for endpoint /api/print-on-demand/v1/images:
+    * Before change:
+    
+            HTTP 200 Reponse
+        
+        ```json
+    [
+            {
+                "id": "string",
+                "url": "string"
+            }
+    ]
+        ```
+    * After change:
+    
+            HTTP 200 Reponse
+
+        ```json
+        {
+            "images": [
+                {
+                    "id": "string",
+                    "url": "string"
+                }
+            ]
+        }
+        ```
 * Optimized /connection/established endpoint
 * Changed response error message and code for revoked access tokens:
     * Before change:
@@ -100,31 +127,4 @@ nav_order: 3
                 "property_name": "Locations"
             }
         ]
-        ```
-* [Breaking change] Changed response for endpoint /api/print-on-demand/v1/images:
-    * Before change:
-    
-            HTTP 200 Reponse
-        
-        ```json
-    [
-            {
-                "id": "string",
-                "url": "string"
-            }
-    ]
-        ```
-    * After change:
-    
-            HTTP 200 Reponse
-
-        ```json
-        {
-            "images": [
-                {
-                    "id": "string",
-                    "url": "string"
-                }
-            ]
-        }
         ```
