@@ -92,7 +92,7 @@ nav_order: 3
         ```
     * After change:
     
-            HTTP 400 BadRequest
+            HTTP 401 Unauthorized
     
         ```json
         {
