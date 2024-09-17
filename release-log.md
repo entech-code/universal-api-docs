@@ -5,7 +5,7 @@ nav_order: 3
 ---
 
 ## Release 1.23
-### Planned: TBA
+### Released: 09/17/2024
 &nbsp;
 * [Breaking change] Errors response format changed to be more explicit:
     * Before change:
